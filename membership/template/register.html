@@ -6,21 +6,13 @@
 </head>
 <body>
 <form>
-<!--<div class="form-group">
-<label for="username">username</label>
-<input type="text" id="username"></div>
-<div class="form-group">
-<label for="email">email</label>
-<input type="email" id="email" placeholder="example@example.om"></div>
-<div class="form-group">
-<label for="password">password</label>
-<input type="password" id="password" placeholder="enter password"></div>
-<label for="confpass">re enter password</label>
-<input type="password" id="confpass" placeholder="confirmpass password"></div>
 
-<button type="submit" class="btn btn-primary">Submit</button>-->
-{%{% csrf_token %}%}
-{{form.as_p}}
+{% csrf_token %}
+{%for field in form%}
+{{field.label}}
+{{field}}
+{% endfor %}
+
 <input type="submit" name="Create user">
 </form>
 </body>

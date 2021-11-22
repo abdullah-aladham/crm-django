@@ -17,13 +17,17 @@ from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
 from django.views.generic import TemplateView
+from customer.views import index
+from search.views import searchListView
 urlpatterns = [
     path('admin/', admin.site.urls),
-   path('',TemplateView.as_view(template_name='index.html'),name='index'),
-   path('customer/',include('membership.urls')),
+  path('',TemplateView.as_view(template_name='index.html'),name='index'),
+   #path('',as_view(template_name=''),name=index),
+  # path('api/',include('membership.urls')),
    path('api/',include('employee.urls')),
   path('api/',include('service.urls')),
   #path('',include('django.contrib.auth.urls')),
+ # path('search/template/index.html',searchListView.as_view())
 
 
 ]

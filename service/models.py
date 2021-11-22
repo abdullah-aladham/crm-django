@@ -10,5 +10,7 @@ class service(models.Model):
     ser_id=models.IntegerField()
     Customer=models.ForeignKey
     amount=models.IntegerField()
-    customer_number=models.IntegerField
+    #customer_id=models.ForeignKey("app.Model", verbose_name=_(""), on_delete=models.CASCADE)
+    
+
     #we need services col which is joined 

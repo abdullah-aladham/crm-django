@@ -2,13 +2,13 @@ from django.forms import ModelForm, fields
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
 from django.contrib.auth.models import User
-from .models import Order
+from .models import membership
 
 
 
 class OrderForm(ModelForm):
     class Meta:
-        model =Order
+        model =membership
         fields='__all__'
 
 
