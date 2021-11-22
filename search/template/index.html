@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+
+{% endblock title %}
+
+{%block content%}
+{%endblock content%}
+
+{%block scripts%}
+<script>
+const data ='{{qs_json}}'
+console.log(data)
+const rdata=JSON.parse(data.replace(/&quot;/g,'"'))
+console.log
+</script>
+{%endblock scripts%}
